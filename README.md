@@ -1,2 +1,534 @@
 # Adrian.github.io
 Personal website for information about me.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Portfolio | Coder & Sports Enthusiast</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --bg: #080b12;
+            --card: #111722;
+            --blue: #00aaff;
+            --blue-light: #42c8ff;
+            --white: #ffffff;
+            --gray: #a9b1bd;
+            --border: rgba(255,255,255,0.08);
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--bg);
+            color: var(--white);
+            line-height: 1.6;
+        }
+
+        /* NAVBAR */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background: rgba(8, 11, 18, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--blue);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--blue);
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 120px 8% 80px;
+            background:
+                radial-gradient(circle at 80% 30%, rgba(0,170,255,0.15), transparent 30%),
+                radial-gradient(circle at 20% 70%, rgba(0,170,255,0.08), transparent 30%);
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: clamp(48px, 8vw, 90px);
+            line-height: 1;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: var(--blue);
+        }
+
+        .hero p {
+            color: var(--gray);
+            font-size: 20px;
+            max-width: 650px;
+            margin-bottom: 35px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 13px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .primary {
+            background: var(--blue);
+            color: #001018;
+        }
+
+        .primary:hover {
+            background: var(--blue-light);
+            transform: translateY(-3px);
+        }
+
+        .secondary {
+            border: 1px solid var(--border);
+            color: white;
+        }
+
+        .secondary:hover {
+            border-color: var(--blue);
+            color: var(--blue);
+        }
+
+        /* SECTIONS */
+        section {
+            padding: 100px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 55px;
+        }
+
+        .section-title h2 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: var(--gray);
+        }
+
+        /* ABOUT */
+        .about {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .about p {
+            color: var(--gray);
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        /* CARDS */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .card {
+            background: var(--card);
+            padding: 35px;
+            border: 1px solid var(--border);
+            border-radius: 15px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(0,170,255,0.5);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+        }
+
+        .card .icon {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            font-size: 23px;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: var(--gray);
+        }
+
+        /* SKILLS */
+        .skills {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .skill {
+            margin-bottom: 25px;
+        }
+
+        .skill-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        .skill-header span:last-child {
+            color: var(--blue);
+        }
+
+        .bar {
+            height: 9px;
+            background: #202735;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .progress {
+            height: 100%;
+            background: linear-gradient(90deg, var(--blue), var(--blue-light));
+            border-radius: 20px;
+        }
+
+        /* DREAM CAR */
+        .dream-car {
+            background:
+                linear-gradient(rgba(8,11,18,0.75), rgba(8,11,18,0.95)),
+                radial-gradient(circle at center, #123149, #080b12 65%);
+            text-align: center;
+        }
+
+        .car-box {
+            max-width: 900px;
+            margin: auto;
+            padding: 60px 30px;
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            background: rgba(17,23,34,0.7);
+        }
+
+        .car-box h3 {
+            font-size: 55px;
+            margin-bottom: 10px;
+        }
+
+        .car-box .subtitle {
+            color: var(--blue);
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .car-box p {
+            color: var(--gray);
+            max-width: 650px;
+            margin: auto;
+        }
+
+        /* CONTACT */
+        .contact {
+            text-align: center;
+        }
+
+        .contact p {
+            color: var(--gray);
+            margin-bottom: 30px;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 30px;
+            border-top: 1px solid var(--border);
+            color: var(--gray);
+        }
+
+        footer span {
+            color: var(--blue);
+        }
+
+        /* MOBILE */
+        @media (max-width: 800px) {
+            nav {
+                padding: 18px 5%;
+            }
+
+            .nav-links {
+                gap: 12px;
+            }
+
+            .nav-links a {
+                font-size: 13px;
+            }
+
+            section {
+                padding: 75px 5%;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding-left: 5%;
+                padding-right: 5%;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            .car-box h3 {
+                font-size: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="logo">&lt;CodeMe/&gt;</div>
+
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#interests">Interests</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#dream-car">Dream Car</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <p style="color:#00aaff; font-weight:bold;">
+                HELLO, I'M A FUTURE DEVELOPER
+            </p>
+
+            <h1>
+                Building my<br>
+                <span>future with code.</span>
+            </h1>
+
+            <p>
+                I'm passionate about coding, technology, sports, and cars.
+                My goal is to keep learning, build awesome projects,
+                and create a future in software development.
+            </p>
+
+            <div class="buttons">
+                <a href="#about" class="btn primary">Explore My Story</a>
+                <a href="#interests" class="btn secondary">My Interests</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <div class="section-title">
+            <h2>About Me</h2>
+            <p>A little about who I am and where I'm going.</p>
+        </div>
+
+        <div class="about">
+            <p>
+                Coding is one of my biggest interests. I enjoy learning how
+                websites, apps, and technology work, and I want to build a
+                career where I can turn ideas into real projects.
+            </p>
+
+            <p>
+                Outside of technology, I love staying active and competitive.
+                Basketball and baseball are two sports I really enjoy.
+            </p>
+
+            <p>
+                I'm also a huge car enthusiast. I love the design, technology,
+                performance, and engineering that goes into modern cars.
+            </p>
+        </div>
+    </section>
+
+    <!-- INTERESTS -->
+    <section id="interests">
+        <div class="section-title">
+            <h2>My Interests</h2>
+            <p>The things that keep me motivated.</p>
+        </div>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="icon">💻</div>
+                <h3>Coding</h3>
+                <p>
+                    I'm interested in programming, web development,
+                    technology, and building projects that solve problems.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🏀</div>
+                <h3>Basketball</h3>
+                <p>
+                    Basketball is one of my favorite ways to stay active,
+                    competitive, and focused.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">⚾</div>
+                <h3>Baseball</h3>
+                <p>
+                    I enjoy baseball for its strategy, teamwork,
+                    competition, and the challenge of improving.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+        <div class="section-title">
+            <h2>My Coding Journey</h2>
+            <p>Skills I'm learning and developing.</p>
+        </div>
+
+        <div class="skills">
+
+            <div class="skill">
+                <div class="skill-header">
+                    <span>HTML</span>
+                    <span>Learning</span>
+                </div>
+                <div class="bar">
+                    <div class="progress" style="width: 85%;"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-header">
+                    <span>CSS</span>
+                    <span>Learning</span>
+                </div>
+                <div class="bar">
+                    <div class="progress" style="width: 75%;"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-header">
+                    <span>JavaScript</span>
+                    <span>Learning</span>
+                </div>
+                <div class="bar">
+                    <div class="progress" style="width: 55%;"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-header">
+                    <span>Problem Solving</span>
+                    <span>Growing</span>
+                </div>
+                <div class="bar">
+                    <div class="progress" style="width: 70%;"></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- DREAM CAR -->
+    <section class="dream-car" id="dream-car">
+        <div class="section-title">
+            <h2>My Dream Car</h2>
+            <p>One day...</p>
+        </div>
+
+        <div class="car-box">
+            <h3>Audi R8</h3>
+            <div class="subtitle">Performance • Design • Engineering</div>
+
+            <p>
+                The Audi R8 represents the combination of technology,
+                performance, and design that I love about cars. It's one
+                of my biggest automotive dreams.
+            </p>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact">
+        <div class="section-title">
+            <h2>What's Next?</h2>
+            <p>Learn. Build. Improve. Repeat.</p>
+        </div>
+
+        <p>
+            I'm working toward a future in technology and software development.
+        </p>
+
+        <a href="#home" class="btn primary">Back to Top ↑</a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>
+            © 2026 <span>My Portfolio</span> · Built with HTML & CSS
+        </p>
+    </footer>
+
+</body>
+</html>
