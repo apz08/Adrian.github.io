@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+
+    <title>Adrian Pena | Future Developer</title>
 
     <style>
-        /* ===== BASIC SETTINGS ===== */
-
         * {
             margin: 0;
             padding: 0;
@@ -19,9 +19,10 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
-            background-color: #080808;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #080808;
             color: white;
+            line-height: 1.6;
         }
 
         a {
@@ -29,14 +30,14 @@
             color: white;
         }
 
-        /* ===== NAVBAR ===== */
+        /* NAVBAR */
 
         header {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            background-color: rgba(8, 8, 8, 0.95);
+            background: rgba(8, 8, 8, 0.95);
             border-bottom: 1px solid #222;
             z-index: 1000;
         }
@@ -51,15 +52,19 @@
         }
 
         .logo {
-            font-size: 24px;
+            font-size: 23px;
             font-weight: bold;
             color: #00aaff;
         }
 
+        .logo span {
+            color: white;
+        }
+
         .nav-links {
-            list-style: none;
             display: flex;
             gap: 25px;
+            list-style: none;
         }
 
         .nav-links a {
@@ -71,13 +76,13 @@
             color: #00aaff;
         }
 
-        /* ===== HERO ===== */
+        /* HERO */
 
         #home {
             min-height: 100vh;
             display: flex;
-            align-items: center;
             justify-content: center;
+            align-items: center;
             text-align: center;
             padding: 120px 20px 60px;
 
@@ -96,12 +101,12 @@
         .hero-small {
             color: #00aaff;
             font-weight: bold;
-            letter-spacing: 3px;
+            letter-spacing: 4px;
             margin-bottom: 20px;
         }
 
         .hero h1 {
-            font-size: 70px;
+            font-size: 75px;
             line-height: 1.05;
             margin-bottom: 25px;
         }
@@ -119,7 +124,7 @@
 
         .button {
             display: inline-block;
-            background-color: #00aaff;
+            background: #00aaff;
             color: #001018;
             padding: 14px 25px;
             border-radius: 8px;
@@ -129,23 +134,23 @@
         }
 
         .button:hover {
-            background-color: #38c5ff;
+            background: #38c5ff;
             transform: translateY(-3px);
         }
 
         .button-outline {
-            background-color: transparent;
+            background: transparent;
             color: white;
             border: 1px solid #444;
         }
 
         .button-outline:hover {
+            background: transparent;
             border-color: #00aaff;
             color: #00aaff;
-            background-color: transparent;
         }
 
-        /* ===== GENERAL SECTIONS ===== */
+        /* GENERAL */
 
         section {
             padding: 100px 20px;
@@ -170,10 +175,10 @@
             color: #999;
         }
 
-        /* ===== ABOUT ===== */
+        /* ABOUT */
 
         #about {
-            background-color: #0d0d0d;
+            background: #0d0d0d;
         }
 
         .about-text {
@@ -190,9 +195,10 @@
 
         .blue {
             color: #00aaff;
+            font-weight: bold;
         }
 
-        /* ===== INTERESTS ===== */
+        /* INTERESTS */
 
         .cards {
             display: grid;
@@ -201,7 +207,7 @@
         }
 
         .card {
-            background-color: #121212;
+            background: #121212;
             border: 1px solid #252525;
             padding: 35px;
             border-radius: 15px;
@@ -227,10 +233,10 @@
             color: #999;
         }
 
-        /* ===== CODING ===== */
+        /* CODING */
 
         #coding {
-            background-color: #0d0d0d;
+            background: #0d0d0d;
         }
 
         .coding-content {
@@ -252,14 +258,14 @@
         }
 
         .code-box {
-            background-color: #050505;
+            background: #050505;
             border: 1px solid #292929;
             border-radius: 12px;
             overflow: hidden;
         }
 
         .code-header {
-            background-color: #151515;
+            background: #151515;
             padding: 12px;
         }
 
@@ -272,15 +278,15 @@
         }
 
         .red {
-            background-color: #ff5f56;
+            background: #ff5f56;
         }
 
         .yellow {
-            background-color: #ffbd2e;
+            background: #ffbd2e;
         }
 
         .green {
-            background-color: #27c93f;
+            background: #27c93f;
         }
 
         .code {
@@ -303,7 +309,7 @@
             color: #c084fc;
         }
 
-        /* ===== SKILLS ===== */
+        /* SKILLS */
 
         .skills {
             max-width: 800px;
@@ -326,20 +332,20 @@
 
         .skill-bar {
             height: 10px;
-            background-color: #222;
+            background: #222;
             border-radius: 20px;
             overflow: hidden;
         }
 
         .skill-progress {
             height: 100%;
-            background-color: #00aaff;
+            background: #00aaff;
         }
 
-        /* ===== SPORTS ===== */
+        /* SPORTS */
 
         #sports {
-            background-color: #0d0d0d;
+            background: #0d0d0d;
         }
 
         .sports {
@@ -349,7 +355,7 @@
         }
 
         .sport {
-            background-color: #121212;
+            background: #121212;
             border: 1px solid #252525;
             border-radius: 15px;
             padding: 40px;
@@ -375,10 +381,11 @@
             color: #999;
         }
 
-        /* ===== DREAM CAR ===== */
+        /* DREAM CAR */
 
         #car {
             text-align: center;
+
             background:
                 radial-gradient(
                     circle at center,
@@ -390,7 +397,7 @@
         .car-box {
             max-width: 900px;
             margin: auto;
-            background-color: #111;
+            background: #111;
             border: 1px solid #292929;
             border-radius: 20px;
             padding: 60px 25px;
@@ -419,7 +426,7 @@
             font-size: 18px;
         }
 
-        /* ===== FUTURE ===== */
+        /* FUTURE */
 
         #future {
             text-align: center;
@@ -436,7 +443,7 @@
             margin-bottom: 25px;
         }
 
-        /* ===== FOOTER ===== */
+        /* FOOTER */
 
         footer {
             text-align: center;
@@ -449,7 +456,7 @@
             color: #00aaff;
         }
 
-        /* ===== MOBILE ===== */
+        /* MOBILE */
 
         @media (max-width: 800px) {
 
@@ -499,18 +506,18 @@
 
 <body>
 
-    <!-- =========================
-         NAVIGATION
-    ========================== -->
+    <!-- NAVIGATION -->
 
     <header>
+
         <nav>
 
             <div class="logo">
-                &lt;CodeMe/&gt;
+                <span>Adrian</span> Pena
             </div>
 
             <ul class="nav-links">
+
                 <li>
                     <a href="#home">Home</a>
                 </li>
@@ -528,41 +535,40 @@
                 </li>
 
                 <li>
-                    <a href="#car">Car</a>
+                    <a href="#car">Dream Car</a>
                 </li>
+
             </ul>
 
         </nav>
+
     </header>
 
 
-    <!-- =========================
-         HOME
-    ========================== -->
+    <!-- HOME -->
 
     <section id="home">
 
         <div class="hero">
 
             <div class="hero-small">
-                FUTURE DEVELOPER
+                WELCOME TO MY PORTFOLIO
             </div>
 
             <h1>
-                Building my
-                <br>
-                <span>future with code.</span>
+                Hi, I'm
+                <span>Adrian Pena.</span>
             </h1>
 
             <p>
                 I'm passionate about coding, technology,
                 basketball, baseball, and cars.
-                My goal is to build a future in technology
-                and become a developer.
+                I'm working toward a future in software
+                development.
             </p>
 
             <a href="#about" class="button">
-                Learn About Me
+                About Me
             </a>
 
             <a href="#coding" class="button button-outline">
@@ -574,39 +580,42 @@
     </section>
 
 
-    <!-- =========================
-         ABOUT
-    ========================== -->
+    <!-- ABOUT -->
 
     <section id="about">
 
         <div class="container">
 
             <div class="section-title">
-                <h2>About Me</h2>
-                <p>Who I am and what I want to do.</p>
+
+                <h2>About Adrian</h2>
+
+                <p>
+                    Who I am and what I'm working toward.
+                </p>
+
             </div>
 
             <div class="about-text">
 
                 <p>
-                    I am interested in
-                    <span class="blue">coding and technology</span>.
-                    I enjoy learning how websites, apps, and
-                    software are created.
+                    My name is
+                    <span class="blue">Adrian Pena</span>,
+                    and I'm interested in coding and technology.
                 </p>
 
                 <p>
-                    My goal is to keep improving my programming
-                    skills and eventually have a career in
-                    software development.
+                    I enjoy learning how websites, applications,
+                    and software are created. My goal is to keep
+                    improving my programming skills and eventually
+                    have a career in technology.
                 </p>
 
                 <p>
-                    When I'm not coding, I enjoy playing
-                    <span class="blue">basketball</span> and
-                    <span class="blue">baseball</span>.
-                    I also love cars.
+                    Outside of coding, I love playing
+                    <span class="blue">basketball</span>,
+                    playing <span class="blue">baseball</span>,
+                    and learning about <span class="blue">cars</span>.
                 </p>
 
             </div>
@@ -616,17 +625,20 @@
     </section>
 
 
-    <!-- =========================
-         INTERESTS
-    ========================== -->
+    <!-- INTERESTS -->
 
     <section>
 
         <div class="container">
 
             <div class="section-title">
+
                 <h2>My Interests</h2>
-                <p>The things I enjoy most.</p>
+
+                <p>
+                    The things I enjoy most.
+                </p>
+
             </div>
 
             <div class="cards">
@@ -637,7 +649,9 @@
                         💻
                     </div>
 
-                    <h3>Coding</h3>
+                    <h3>
+                        Coding
+                    </h3>
 
                     <p>
                         I enjoy creating websites, learning
@@ -653,11 +667,13 @@
                         🏀
                     </div>
 
-                    <h3>Basketball</h3>
+                    <h3>
+                        Basketball
+                    </h3>
 
                     <p>
-                        I love basketball because of the
-                        competition, teamwork, and energy.
+                        I love the competition, teamwork,
+                        speed, and energy of basketball.
                     </p>
 
                 </div>
@@ -669,7 +685,9 @@
                         ⚾
                     </div>
 
-                    <h3>Baseball</h3>
+                    <h3>
+                        Baseball
+                    </h3>
 
                     <p>
                         I enjoy baseball because of its
@@ -685,24 +703,31 @@
     </section>
 
 
-    <!-- =========================
-         CODING
-    ========================== -->
+    <!-- CODING -->
 
     <section id="coding">
 
         <div class="container">
 
             <div class="section-title">
-                <h2>My Coding Journey</h2>
-                <p>Learning today. Building tomorrow.</p>
+
+                <h2>
+                    My Coding Journey
+                </h2>
+
+                <p>
+                    Learning today. Building tomorrow.
+                </p>
+
             </div>
 
             <div class="coding-content">
 
                 <div class="coding-text">
 
-                    <h3>Why I Love Coding</h3>
+                    <h3>
+                        Why I Love Coding
+                    </h3>
 
                     <p>
                         Coding gives me the ability to turn
@@ -715,8 +740,9 @@
                     </p>
 
                     <p>
-                        I want to keep learning and eventually
-                        work in the technology industry.
+                        I want to keep learning new skills,
+                        build projects, and eventually work
+                        in the technology industry.
                     </p>
 
                 </div>
@@ -735,9 +761,17 @@
                     <div class="code">
 
                         <span class="code-purple">const</span>
-                        future =
+                        name =
                         <span class="code-green">
-                            "developer";
+                            "Adrian Pena";
+                        </span>
+
+                        <br><br>
+
+                        <span class="code-purple">const</span>
+                        goal =
+                        <span class="code-green">
+                            "Become a developer";
                         </span>
 
                         <br><br>
@@ -790,17 +824,22 @@
     </section>
 
 
-    <!-- =========================
-         SKILLS
-    ========================== -->
+    <!-- SKILLS -->
 
     <section>
 
         <div class="container">
 
             <div class="section-title">
-                <h2>Skills I'm Learning</h2>
-                <p>My current progress.</p>
+
+                <h2>
+                    Skills I'm Learning
+                </h2>
+
+                <p>
+                    My current coding journey.
+                </p>
+
             </div>
 
             <div class="skills">
@@ -808,15 +847,24 @@
                 <div class="skill">
 
                     <div class="skill-top">
-                        <span>HTML</span>
-                        <span>85%</span>
+
+                        <span>
+                            HTML
+                        </span>
+
+                        <span>
+                            85%
+                        </span>
+
                     </div>
 
                     <div class="skill-bar">
+
                         <div
                             class="skill-progress"
                             style="width: 85%;">
                         </div>
+
                     </div>
 
                 </div>
@@ -825,15 +873,24 @@
                 <div class="skill">
 
                     <div class="skill-top">
-                        <span>CSS</span>
-                        <span>75%</span>
+
+                        <span>
+                            CSS
+                        </span>
+
+                        <span>
+                            75%
+                        </span>
+
                     </div>
 
                     <div class="skill-bar">
+
                         <div
                             class="skill-progress"
                             style="width: 75%;">
                         </div>
+
                     </div>
 
                 </div>
@@ -842,15 +899,24 @@
                 <div class="skill">
 
                     <div class="skill-top">
-                        <span>JavaScript</span>
-                        <span>55%</span>
+
+                        <span>
+                            JavaScript
+                        </span>
+
+                        <span>
+                            55%
+                        </span>
+
                     </div>
 
                     <div class="skill-bar">
+
                         <div
                             class="skill-progress"
                             style="width: 55%;">
                         </div>
+
                     </div>
 
                 </div>
@@ -859,15 +925,24 @@
                 <div class="skill">
 
                     <div class="skill-top">
-                        <span>Problem Solving</span>
-                        <span>70%</span>
+
+                        <span>
+                            Problem Solving
+                        </span>
+
+                        <span>
+                            70%
+                        </span>
+
                     </div>
 
                     <div class="skill-bar">
+
                         <div
                             class="skill-progress"
                             style="width: 70%;">
                         </div>
+
                     </div>
 
                 </div>
@@ -879,17 +954,22 @@
     </section>
 
 
-    <!-- =========================
-         SPORTS
-    ========================== -->
+    <!-- SPORTS -->
 
     <section id="sports">
 
         <div class="container">
 
             <div class="section-title">
-                <h2>Sports I Love</h2>
-                <p>Competition and teamwork.</p>
+
+                <h2>
+                    Sports I Love
+                </h2>
+
+                <p>
+                    Competition, teamwork, and improvement.
+                </p>
+
             </div>
 
             <div class="sports">
@@ -900,7 +980,9 @@
                         🏀
                     </div>
 
-                    <h3>Basketball</h3>
+                    <h3>
+                        Basketball
+                    </h3>
 
                     <p>
                         Basketball is one of my favorite sports.
@@ -917,7 +999,9 @@
                         ⚾
                     </div>
 
-                    <h3>Baseball</h3>
+                    <h3>
+                        Baseball
+                    </h3>
 
                     <p>
                         Baseball is another sport I love.
@@ -934,17 +1018,22 @@
     </section>
 
 
-    <!-- =========================
-         DREAM CAR
-    ========================== -->
+    <!-- DREAM CAR -->
 
     <section id="car">
 
         <div class="container">
 
             <div class="section-title">
-                <h2>My Dream Car</h2>
-                <p>A goal for the future.</p>
+
+                <h2>
+                    My Dream Car
+                </h2>
+
+                <p>
+                    A goal for the future.
+                </p>
+
             </div>
 
             <div class="car-box">
@@ -953,7 +1042,9 @@
                     🏎️
                 </div>
 
-                <h3>Audi R8</h3>
+                <h3>
+                    Audi R8
+                </h3>
 
                 <div class="car-subtitle">
                     PERFORMANCE • DESIGN • TECHNOLOGY
@@ -974,17 +1065,22 @@
     </section>
 
 
-    <!-- =========================
-         FUTURE
-    ========================== -->
+    <!-- FUTURE -->
 
     <section id="future">
 
         <div class="container">
 
             <div class="section-title">
-                <h2>What's Next?</h2>
-                <p>My journey is just getting started.</p>
+
+                <h2>
+                    What's Next?
+                </h2>
+
+                <p>
+                    My journey is just getting started.
+                </p>
+
             </div>
 
             <div class="future-text">
@@ -1007,19 +1103,18 @@
     </section>
 
 
-    <!-- =========================
-         FOOTER
-    ========================== -->
+    <!-- FOOTER -->
 
     <footer>
 
         <p>
             © 2026
-            <span>My Portfolio</span>
+            <span>Adrian Pena</span>
             | Built with HTML and CSS
         </p>
 
     </footer>
 
 </body>
+
 </html>
